@@ -1,13 +1,15 @@
-import React from "react"
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ShortenerPage from './Pages/ShortenerPage';
 
-function App() {
- 
-
+const App = () => {
   return (
-    <>
-      <h4 className="text-[40px]">Hello World</h4>
-    </>
-  )
-}
+    <Router>
+      <Routes>
+        <Route path="/" element={<ShortenerPage />} />
+      </Routes>
+    </Router>
+  );
+};
 
-export default App
+export default App;

@@ -17,3 +17,23 @@
 [2025-09-09T06:18:12.368Z] POST /shorturls 201 - 63ms - IP:::1 - UA:PostmanRuntime/7.45.0
 [2025-09-09T06:18:34.117Z] POST /shorturls 201 - 20ms - IP:::1 - UA:PostmanRuntime/7.45.0
 [2025-09-09T06:23:20.280Z] POST /shorturls 201 - 57ms - IP:::1 - UA:PostmanRuntime/7.45.0
+[2025-09-09T06:31:35.663Z] POST /shorturls 201 - 10ms - IP:::1 - UA:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+[2025-09-09T06:31:41.208Z] GET /sagargithub 501 - 1ms - IP:::1 - UA:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+[2025-09-09T06:31:41.236Z] GET /favicon.ico 501 - 1ms - IP:::1 - UA:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+[2025-09-09T06:35:52.089Z] GET /sagargithub 501 - 7ms - IP:::1 - UA:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+[2025-09-09T06:35:52.108Z] GET /favicon.ico 501 - 2ms - IP:::1 - UA:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+[2025-09-09T06:36:24.623Z] POST /shorturls 201 - 21ms - IP:::1 - UA:PostmanRuntime/7.45.0
+[2025-09-09T06:36:52.638Z] GET /sagarkrishna 501 - 1ms - IP:::1 - UA:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+[2025-09-09T06:36:52.678Z] GET /favicon.ico 501 - 1ms - IP:::1 - UA:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+[2025-09-09T06:40:26.440Z] POST /shorturls 201 - 53ms - IP:::1 - UA:PostmanRuntime/7.45.0
+[2025-09-09T06:40:46.603Z] GET /sagarkrishna 501 - 3ms - IP:::1 - UA:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+[2025-09-09T06:40:46.645Z] GET /favicon.ico 501 - 1ms - IP:::1 - UA:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+[2025-09-09T06:43:46.277Z] POST /shorturls 201 - 69ms - IP:::1 - UA:PostmanRuntime/7.45.0
+[2025-09-09T06:44:03.636Z] GET /sagarkrishna 501 - 2ms - IP:::1 - UA:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+[2025-09-09T06:44:03.676Z] GET /favicon.ico 501 - 2ms - IP:::1 - UA:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+[2025-09-09T06:46:32.292Z] POST /shorturls 201 - 57ms - IP:::1 - UA:PostmanRuntime/7.45.0
+[2025-09-09T06:46:38.009Z] GET /sagarkrishna 302 - 24ms - IP:::1 - UA:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+[2025-09-09T06:46:54.999Z] GET /sagargithub 404 - 5ms - IP:::1 - UA:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+[2025-09-09T06:46:55.050Z] GET /favicon.ico 404 - 8ms - IP:::1 - UA:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+[2025-09-09T06:47:23.514Z] POST /shorturls 201 - 12ms - IP:::1 - UA:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+[2025-09-09T06:47:25.716Z] GET /github 302 - 8ms - IP:::1 - UA:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36

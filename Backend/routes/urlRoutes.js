@@ -1,15 +1,15 @@
 import express from 'express';
-import { shortenUrl, redirectUrl, getStats } from '../controllers/urlController.js';
+import { shortenUrl, redirectUrl, getStats } from '../controllers/redirectUrl.js';
 
 const router = express.Router();
 
-// Create a short URL
+// Shorten URL
 router.post('/shorturls', shortenUrl);
+
+// Get URL stats
+router.get('/shorturls/:shortcode', getStats);
 
 // Redirect to original URL
 router.get('/:shortcode', redirectUrl);
-
-// Get statistics
-router.get('/shorturls/:shortcode', getStats);
 
 export default router;
