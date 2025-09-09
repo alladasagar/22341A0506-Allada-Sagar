@@ -20,9 +20,9 @@ export const shortenUrl = async (req, res) => {
       exists = await Url.findOne({ shortCode });
     }
 
-    const expiryDate = validity
-      ? new Date(Date.now() + validity * 24 * 60 * 60 * 1000)
-      : null;
+const expiryDate = validity
+  ? new Date(Date.now() + validity * 60 * 1000)
+  : null;
 
     const url = new Url({
       originalUrl,

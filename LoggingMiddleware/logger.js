@@ -1,40 +1,61 @@
-import fs from "fs";
-import path from "path";
-import { fileURLToPath } from "url";
+import axios from 'axios';
 
-// Fix __dirname in ES Modules
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// Central logging API endpoint
+const LOGGING_API_URL = 'http://20.244.56.144/evaluation-service/logs';
+// If the API requires authentication, add your token here
+const AUTH_TOKEN = process.env.LOG_API_TOKEN || '';
 
-// Ensure logs folder exists
-const logDir = path.join(__dirname, "logs");
-if (!fs.existsSync(logDir)) {
-  fs.mkdirSync(logDir);
-}
+/**
+ * Send log to central logging service
+ * @param {Object} param0
+ * @param {'backend'|'frontend'} param0.stack
+ * @param {'debug'|'info'|'warn'|'error'|'fatal'} param0.level
+ * @param {string} param0.packageName
+ * @param {string} param0.message
+ */
+export const sendLog = async ({ stack, level, packageName, message }) => {
+  const body = {
+    stack,
+    level,
+    package: packageName,
+    message,
+  };
 
-// Log file
-const logFile = path.join(logDir, "requests.log");
+  try {
+    const response = await axios.post(LOGGING_API_URL, body, {
+      headers: {
+        'Content-Type': 'application/json',
+        ...(AUTH_TOKEN && { Authorization: `Bearer ${AUTH_TOKEN}` }),
+      },
+    });
+    console.log('Log sent successfully:', response.data);
+  } catch (error) {
+    console.error('Error sending log:', error.message);
+  }
+};
 
-export default function logger(req, res, next) {
+/**
+ * Express middleware to log all requests
+ */
+const loggerMiddleware = async (req, res, next) => {
   const start = Date.now();
 
-  res.on("finish", () => {
+  res.on('finish', async () => {
     const duration = Date.now() - start;
-    const logEntry = `[${new Date().toISOString()}] ${req.method} ${
-      req.originalUrl
-    } ${res.statusCode} - ${duration}ms - IP:${
-      req.ip
-    } - UA:${req.headers["user-agent"]}\n`;
+    const logMessage = `${req.method} ${req.originalUrl} ${res.statusCode} - ${duration}ms - IP: ${req.ip}`;
 
-    fs.appendFile(logFile, logEntry, (err) => {
-      if (err) {
-        fs.appendFileSync(
-          path.join(logDir, "logger-error.log"),
-          `[${new Date().toISOString()}] Failed to write log\n`
-        );
-      }
+    // Send info level log to central logging
+    await sendLog({
+      stack: 'backend',
+      level: 'info',
+      packageName: 'middleware',
+      message: logMessage,
     });
+
+    console.log(logMessage);
   });
 
   next();
-}
+};
+
+export default loggerMiddleware;

@@ -14,7 +14,7 @@ const UrlForm = ({ onSuccess }) => {
     try {
       const data = {
         originalUrl,
-        validity: validity ? Number(validity) : undefined,
+        validity: validity ? Number(validity) : 30,
         shortcode: shortcode || undefined,
       };
       const result = await shortenUrl(data);
@@ -39,7 +39,7 @@ const UrlForm = ({ onSuccess }) => {
       />
       <input
         type="number"
-        placeholder="Validity (days)"
+        placeholder="Validity (mins)"
         value={validity}
         onChange={(e) => setValidity(e.target.value)}
         className="border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"

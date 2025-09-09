@@ -1,5 +1,5 @@
 import express from 'express';
-import { shortenUrl, redirectUrl, getStats } from '../controllers/redirectUrl.js';
+import { shortenUrl, redirectUrl, getStats } from '../controllers/shortenUrl.js';
 
 const router = express.Router();
 
